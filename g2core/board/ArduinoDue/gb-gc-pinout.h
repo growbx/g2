@@ -1,5 +1,5 @@
 /*
- * motate_pin_assignments.h - pin assignments
+ * gb-gc-pinout.h - pin assignments
  * For: /board/ArduinoDue
  * This file is part of the g2core project
  *
@@ -30,8 +30,8 @@
  *
  */
 
-#ifndef gShield_pinout_h
-#define gShield_pinout_h
+#ifndef gb_gc_pinout_h
+#define gb_gc_pinout_h
 
 #include <MotatePins.h>
 
@@ -51,8 +51,8 @@
 #define INPUT8_AVAILABLE 1
 #define INPUT9_AVAILABLE 1
 #define INPUT10_AVAILABLE 1
-#define INPUT11_AVAILABLE 1
-#define INPUT12_AVAILABLE 1
+#define INPUT11_AVAILABLE 0
+#define INPUT12_AVAILABLE 0
 #define INPUT13_AVAILABLE 0
 
 #define ADC0_AVAILABLE 0
@@ -163,21 +163,21 @@ pin_number kSocket3_Microstep_1PinNumber    = -1;
 pin_number kSocket3_Microstep_2PinNumber    = -1;
 pin_number kSocket3_VrefPinNumber           = -1;  // 63; //PWMTimer<2>
 
-pin_number kSocket4_SPISlaveSelectPinNumber = 77;
+pin_number kSocket4_SPISlaveSelectPinNumber = -1;
 pin_number kSocket4_InterruptPinNumber      = -1;
-pin_number kSocket4_StepPinNumber           = 31;
-pin_number kSocket4_DirPinNumber            = 32;
-pin_number kSocket4_EnablePinNumber         = 33;
-pin_number kSocket4_Microstep_0PinNumber    = 35;
-pin_number kSocket4_Microstep_1PinNumber    = 36;
+pin_number kSocket4_StepPinNumber           = 2;
+pin_number kSocket4_DirPinNumber            = 23;
+pin_number kSocket4_EnablePinNumber         = 25;
+pin_number kSocket4_Microstep_0PinNumber    = -1;
+pin_number kSocket4_Microstep_1PinNumber    = -1;
 pin_number kSocket4_Microstep_2PinNumber    = -1;
 pin_number kSocket4_VrefPinNumber           = -1;  // 64; //PWMTimer<3>
 
 pin_number kSocket5_SPISlaveSelectPinNumber = -1;
 pin_number kSocket5_InterruptPinNumber      = -1;
-pin_number kSocket5_StepPinNumber           = 2;
-pin_number kSocket5_DirPinNumber            = 23;
-pin_number kSocket5_EnablePinNumber         = 25;
+pin_number kSocket5_StepPinNumber           = 27;
+pin_number kSocket5_DirPinNumber            = 29;
+pin_number kSocket5_EnablePinNumber         = 31;
 pin_number kSocket5_Microstep_0PinNumber    = -1;
 pin_number kSocket5_Microstep_1PinNumber    = -1;
 pin_number kSocket5_Microstep_2PinNumber    = -1;
@@ -185,9 +185,9 @@ pin_number kSocket5_VrefPinNumber           = -1;  // 66; //PWMTimer<3>
 
 pin_number kSocket6_SPISlaveSelectPinNumber = -1;
 pin_number kSocket6_InterruptPinNumber      = -1;
-pin_number kSocket6_StepPinNumber           = 27;
-pin_number kSocket6_DirPinNumber            = 29;
-pin_number kSocket6_EnablePinNumber         = 31;
+pin_number kSocket6_StepPinNumber           = -1;
+pin_number kSocket6_DirPinNumber            = -1;
+pin_number kSocket6_EnablePinNumber         = -1;
 pin_number kSocket6_Microstep_0PinNumber    = -1;  // 45;
 pin_number kSocket6_Microstep_1PinNumber    = -1;
 pin_number kSocket6_Microstep_2PinNumber    = -1;
@@ -218,8 +218,8 @@ pin_number kSD_CardDetectPinNumber = -1;
 pin_number kInterlock_InPinNumber  = -1;
 pin_number kOutputSAFE_PinNumber   = -1;  // SAFE signal
 
-pin_number kLED_USBRXPinNumber = -1;
-pin_number kLED_USBTXPinNumber = -1;
+pin_number kLED_USBRXPinNumber = 72;
+pin_number kLED_USBTXPinNumber = 73;
 
 
 pin_number kOutput1_PinNumber = 52;  // Diagnostic LED

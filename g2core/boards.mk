@@ -144,6 +144,16 @@ ifeq ("$(CONFIG)","Ultimakerv9k")
 endif
 
 ##########
+# Growbox configs:
+
+ifeq ("$(CONFIG)","Growbot")
+    ifeq ("$(BOARD)","NONE")
+        BOARD=gb-gc
+    endif
+    SETTINGS_FILE="settings_growbot.h"
+endif
+
+##########
 # EMSL configs:
 
 ifeq ("$(CONFIG)","WaterColorBotv2")

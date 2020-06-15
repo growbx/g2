@@ -43,6 +43,12 @@ ifeq ("$(BOARD)","shopbotShield")
     DEVICE_DEFINES += SETTINGS_FILE=${SETTINGS_FILE}
 endif
 
+ifeq ("$(BOARD)","gb-gc")
+    BASE_BOARD = g2core-due
+    DEVICE_DEFINES += MOTATE_BOARD="gb-gc"
+    DEVICE_DEFINES += SETTINGS_FILE=${SETTINGS_FILE}
+endif
+
 
 
 ##########
