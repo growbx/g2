@@ -58,7 +58,7 @@
 
 // #define JUNCTION_INTEGRATION_TIME   0.75    // {jt: cornering - between 0.05 and 2.00 (max)
 // #define CHORDAL_TOLERANCE           0.01    // {ct: chordal tolerance for arcs (in mm)
-// #define MOTOR_POWER_TIMEOUT         20.00   // {mt:  motor power timeout in seconds
+#define MOTOR_POWER_TIMEOUT         20.00   // {mt:  motor power timeout in seconds
 // #define SOFT_LIMIT_ENABLE           0       // {sl: 0=off, 1=on
 // #define HARD_LIMIT_ENABLE           1       // {lim: 0=off, 1=on
 // #define SAFETY_INTERLOCK_ENABLE     1       // {saf: 0=off, 1=on
@@ -104,68 +104,68 @@
 // MOTOR 1
 #define M1_MOTOR_MAP                AXIS_X_EXTERNAL                // {1ma: AXIS_X, AXIS_Y...
 #define M1_STEP_ANGLE               1.8                     // {1sa: degrees per step
-#define M1_TRAVEL_PER_REV           5                       // {1tr:  1.25 is a typical value for a screw axis
+#define M1_TRAVEL_PER_REV           45.0                       // {1tr:  1.25 is a typical value for a screw axis
 #define M1_MICROSTEPS               8                       // {1mi:  1,2,4,8,    16,32 (G2 ONLY)
-#define M1_STEPS_PER_UNIT           100                     // {1su:  steps to issue per unit of length or degrees of rotation
+#define M1_STEPS_PER_UNIT           0                     // {1su:  steps to issue per unit of length or degrees of rotation
 #define M1_POLARITY                 0                       // {1po:  0=normal direction, 1=inverted direction
 #define M1_ENABLE_POLARITY          IO_ACTIVE_HIGH          // {1ep:  IO_ACTIVE_LOW or IO_ACTIVE_HIGH
 #define M1_STEP_POLARITY            IO_ACTIVE_HIGH          // {1ps:  IO_ACTIVE_LOW or IO_ACTIVE_HIGH
 #define M1_POWER_MODE               MOTOR_POWERED_ONLY_WHEN_MOVING  // {1pm:  MOTOR_DISABLED, MOTOR_ALWAYS_POWERED, MOTOR_POWERED_IN_CYCLE, MOTOR_POWERED_ONLY_WHEN_MOVING
-#define M1_POWER_LEVEL              1.0                     // {1pl:   0.0=no power, 1.0=max power
+#define M1_POWER_LEVEL              0.0                     // {1pl:   0.0=no power, 1.0=max power
 
-// // MOTOR 2
-// #define M2_MOTOR_MAP                AXIS_Y_EXTERNAL
-// #define M2_STEP_ANGLE               1.8
-// #define M2_TRAVEL_PER_REV           40.00
-// #define M2_MICROSTEPS               8
-// #define M2_STEPS_PER_UNIT           0
-// #define M2_POLARITY                 0
-// #define M2_ENABLE_POLARITY          IO_ACTIVE_HIGH
-// #define M2_STEP_POLARITY            IO_ACTIVE_HIGH
-// #define M2_POWER_MODE               MOTOR_DISABLED
-// #define M2_POWER_LEVEL              0.0
+// MOTOR 2
+#define M2_MOTOR_MAP                AXIS_Y_EXTERNAL
+#define M2_STEP_ANGLE               1.8
+#define M2_TRAVEL_PER_REV           40.00
+#define M2_MICROSTEPS               8
+#define M2_STEPS_PER_UNIT           0
+#define M2_POLARITY                 0
+#define M2_ENABLE_POLARITY          IO_ACTIVE_HIGH
+#define M2_STEP_POLARITY            IO_ACTIVE_HIGH
+#define M2_POWER_MODE               MOTOR_POWERED_ONLY_WHEN_MOVING
+#define M2_POWER_LEVEL              0.0
 
-// // MOTOR 3
-// #define M3_MOTOR_MAP                AXIS_Z_EXTERNAL
-// #define M3_STEP_ANGLE               1.8
-// #define M3_TRAVEL_PER_REV           1.25                    // 1.25 is a typical value for a screw axis
-// #define M3_MICROSTEPS               8
-// #define M3_STEPS_PER_UNIT           0
-// #define M3_POLARITY                 0
-// #define M3_ENABLE_POLARITY          IO_ACTIVE_HIGH
-// #define M3_STEP_POLARITY            IO_ACTIVE_HIGH
-// #define M3_POWER_MODE               MOTOR_DISABLED
-// #define M3_POWER_LEVEL              0.0
+// MOTOR 3
+#define M3_MOTOR_MAP                AXIS_Y_EXTERNAL
+#define M3_STEP_ANGLE               1.8
+#define M3_TRAVEL_PER_REV           60.0                    // 1.25 is a typical value for a screw axis
+#define M3_MICROSTEPS               8
+#define M3_STEPS_PER_UNIT           0
+#define M3_POLARITY                 0
+#define M3_ENABLE_POLARITY          IO_ACTIVE_HIGH
+#define M3_STEP_POLARITY            IO_ACTIVE_HIGH
+#define M3_POWER_MODE               MOTOR_POWERED_ONLY_WHEN_MOVING
+#define M3_POWER_LEVEL              0.0
 
-// // MOTOR 4
-// #define M4_MOTOR_MAP                AXIS_A_EXTERNAL
-// #define M4_STEP_ANGLE               1.8
-// #define M4_TRAVEL_PER_REV           360.0                   // in degrees if rotary axis (ABC)
-// #define M4_MICROSTEPS               8
-// #define M4_STEPS_PER_UNIT           0
-// #define M4_POLARITY                 0
-// #define M4_ENABLE_POLARITY          IO_ACTIVE_HIGH
-// #define M4_STEP_POLARITY            IO_ACTIVE_HIGH
-// #define M4_POWER_MODE               MOTOR_DISABLED
-// #define M4_POWER_LEVEL              0.0
+// MOTOR 4
+#define M4_MOTOR_MAP                AXIS_Z_EXTERNAL
+#define M4_STEP_ANGLE               1.8
+#define M4_TRAVEL_PER_REV           60.0                   // in degrees if rotary axis (ABC)
+#define M4_MICROSTEPS               8
+#define M4_STEPS_PER_UNIT           0
+#define M4_POLARITY                 0
+#define M4_ENABLE_POLARITY          IO_ACTIVE_HIGH
+#define M4_STEP_POLARITY            IO_ACTIVE_HIGH
+#define M4_POWER_MODE               MOTOR_POWERED_ONLY_WHEN_MOVING
+#define M4_POWER_LEVEL              0.0
 
-// // MOTOR 5
-// #define M5_MOTOR_MAP                AXIS_B_EXTERNAL
-// #define M5_STEP_ANGLE               1.8
-// #define M5_TRAVEL_PER_REV           360.0
-// #define M5_MICROSTEPS               8
-// #define M5_STEPS_PER_UNIT           0
-// #define M5_POLARITY                 0
-// #define M5_ENABLE_POLARITY          IO_ACTIVE_HIGH
-// #define M5_STEP_POLARITY            IO_ACTIVE_HIGH
-// #define M5_POWER_MODE               MOTOR_DISABLED
-// #define M5_POWER_LEVEL              0.0
+// MOTOR 5
+#define M5_MOTOR_MAP                AXIS_Z_EXTERNAL
+#define M5_STEP_ANGLE               1.8
+#define M5_TRAVEL_PER_REV           60.0
+#define M5_MICROSTEPS               8
+#define M5_STEPS_PER_UNIT           0
+#define M5_POLARITY                 0
+#define M5_ENABLE_POLARITY          IO_ACTIVE_HIGH
+#define M5_STEP_POLARITY            IO_ACTIVE_HIGH
+#define M5_POWER_MODE               MOTOR_POWERED_ONLY_WHEN_MOVING
+#define M5_POWER_LEVEL              0.0
 
 // //*****************************************************************************
 // //*** Axis Settings ***********************************************************
 // //*****************************************************************************
 
-// // X AXIS
+// X AXIS
 #define X_AXIS_MODE                 AXIS_STANDARD           // {xam:  see canonical_machine.h cmAxisMode for valid values
 // #define X_VELOCITY_MAX              1000.0                  // {xvm:  G0 max velocity in mm/min
 // #define X_FEEDRATE_MAX              1000.0                  // {xfr:  G1 max feed rate in mm/min
@@ -180,12 +180,12 @@
 // #define X_LATCH_BACKOFF             4.0                     // {xlb:  mm
 // #define X_ZERO_BACKOFF              2.0                     // {xzb:  mm
 
-// // Y AXIS
-// #define Y_AXIS_MODE                 AXIS_DISABLED
+// Y AXIS
+#define Y_AXIS_MODE                 AXIS_STANDARD
 // #define Y_VELOCITY_MAX              1000.0
 // #define Y_FEEDRATE_MAX              1000.0
 // #define Y_TRAVEL_MIN                0.0
-// #define Y_TRAVEL_MAX                0.0
+#define Y_TRAVEL_MAX                5000.0
 // #define Y_JERK_MAX                  1000.0
 // #define Y_JERK_HIGH_SPEED           1000.0
 // #define Y_HOMING_INPUT              0
@@ -195,11 +195,11 @@
 // #define Y_LATCH_BACKOFF             4.0
 // #define Y_ZERO_BACKOFF              2.0
 
-// // Z AXIS
-// #define Z_AXIS_MODE                 AXIS_DISABLED
+// Z AXIS
+#define Z_AXIS_MODE                 AXIS_STANDARD
 // #define Z_VELOCITY_MAX              1000.0
 // #define Z_FEEDRATE_MAX              1000.0
-// #define Z_TRAVEL_MAX                0.0
+#define Z_TRAVEL_MAX                5000.0
 // #define Z_TRAVEL_MIN                0.0
 // #define Z_JERK_MAX                  500.0
 // #define Z_JERK_HIGH_SPEED           500.0
