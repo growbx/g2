@@ -69,7 +69,7 @@
 
 // // *** Communications and Reporting Settings *** //
 
-// #define USB_SERIAL_PORTS_EXPOSED    1                       // Valid options are 1 or 2, only!
+#define USB_SERIAL_PORTS_EXPOSED    2                       // Valid options are 1 or 2, only!
 // #define XIO_ENABLE_FLOW_CONTROL     FLOW_CONTROL_RTS        // {ex: FLOW_CONTROL_OFF, FLOW_CONTROL_XON, FLOW_CONTROL_RTS
 // #define COMM_MODE                   JSON_MODE               // {ej: TEXT_MODE, JSON_MODE
 // #define TEXT_VERBOSITY              TV_VERBOSE              // {tv: TV_SILENT, TV_VERBOSE
@@ -90,7 +90,7 @@
 
 // // *** Gcode Startup Defaults *** //
 
-// #define GCODE_DEFAULT_UNITS         INCHES                  // {gun: MILLIMETERS or INCHES
+#define GCODE_DEFAULT_UNITS         MILLIMETERS                  // {gun: MILLIMETERS or INCHES
 // #define GCODE_DEFAULT_PLANE         CANON_PLANE_XY          // {gpl: CANON_PLANE_XY, CANON_PLANE_XZ, or CANON_PLANE_YZ
 // #define GCODE_DEFAULT_COORD_SYSTEM  G54                     // {gco: G54, G55, G56, G57, G58 or G59
 // #define GCODE_DEFAULT_PATH_CONTROL  PATH_CONTINUOUS         // {gpa: PATH_EXACT_PATH, PATH_EXACT_STOP, PATH_CONTINUOUS
@@ -111,7 +111,7 @@
 #define M1_ENABLE_POLARITY          IO_ACTIVE_HIGH          // {1ep:  IO_ACTIVE_LOW or IO_ACTIVE_HIGH
 #define M1_STEP_POLARITY            IO_ACTIVE_HIGH          // {1ps:  IO_ACTIVE_LOW or IO_ACTIVE_HIGH
 #define M1_POWER_MODE               MOTOR_POWERED_ONLY_WHEN_MOVING  // {1pm:  MOTOR_DISABLED, MOTOR_ALWAYS_POWERED, MOTOR_POWERED_IN_CYCLE, MOTOR_POWERED_ONLY_WHEN_MOVING
-#define M1_POWER_LEVEL              0.0                     // {1pl:   0.0=no power, 1.0=max power
+#define M1_POWER_LEVEL              1.0                     // {1pl:   0.0=no power, 1.0=max power
 
 // MOTOR 2
 #define M2_MOTOR_MAP                AXIS_Y_EXTERNAL
