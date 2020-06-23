@@ -69,7 +69,7 @@
 
 // // *** Communications and Reporting Settings *** //
 
-#define USB_SERIAL_PORTS_EXPOSED    2                       // Valid options are 1 or 2, only!
+#define USB_SERIAL_PORTS_EXPOSED    1                       // Valid options are 1 or 2, only!
 // #define XIO_ENABLE_FLOW_CONTROL     FLOW_CONTROL_RTS        // {ex: FLOW_CONTROL_OFF, FLOW_CONTROL_XON, FLOW_CONTROL_RTS
 // #define COMM_MODE                   JSON_MODE               // {ej: TEXT_MODE, JSON_MODE
 // #define TEXT_VERBOSITY              TV_VERBOSE              // {tv: TV_SILENT, TV_VERBOSE
@@ -101,16 +101,20 @@
 // //*** Motor Settings **********************************************************
 // //*****************************************************************************
 
+#define ENABLE_POLARITY IO_ACTIVE_HIGH
+#define STEP_POLARITY   IO_ACTIVE_LOW
+#define POWER_MODE      MOTOR_POWERED_ONLY_WHEN_MOVING
+
 // MOTOR 1
 #define M1_MOTOR_MAP                AXIS_X_EXTERNAL                // {1ma: AXIS_X, AXIS_Y...
 #define M1_STEP_ANGLE               1.8                     // {1sa: degrees per step
-#define M1_TRAVEL_PER_REV           45.0                       // {1tr:  1.25 is a typical value for a screw axis
+#define M1_TRAVEL_PER_REV           40                       // {1tr:  1.25 is a typical value for a screw axis
 #define M1_MICROSTEPS               8                       // {1mi:  1,2,4,8,    16,32 (G2 ONLY)
 #define M1_STEPS_PER_UNIT           0                     // {1su:  steps to issue per unit of length or degrees of rotation
 #define M1_POLARITY                 0                       // {1po:  0=normal direction, 1=inverted direction
-#define M1_ENABLE_POLARITY          IO_ACTIVE_HIGH          // {1ep:  IO_ACTIVE_LOW or IO_ACTIVE_HIGH
-#define M1_STEP_POLARITY            IO_ACTIVE_HIGH          // {1ps:  IO_ACTIVE_LOW or IO_ACTIVE_HIGH
-#define M1_POWER_MODE               MOTOR_POWERED_ONLY_WHEN_MOVING  // {1pm:  MOTOR_DISABLED, MOTOR_ALWAYS_POWERED, MOTOR_POWERED_IN_CYCLE, MOTOR_POWERED_ONLY_WHEN_MOVING
+#define M1_ENABLE_POLARITY          ENABLE_POLARITY          // {1ep:  IO_ACTIVE_LOW or IO_ACTIVE_HIGH
+#define M1_STEP_POLARITY            STEP_POLARITY          // {1ps:  IO_ACTIVE_LOW or IO_ACTIVE_HIGH
+#define M1_POWER_MODE               POWER_MODE  // {1pm:  MOTOR_DISABLED, MOTOR_ALWAYS_POWERED, MOTOR_POWERED_IN_CYCLE, MOTOR_POWERED_ONLY_WHEN_MOVING
 #define M1_POWER_LEVEL              1.0                     // {1pl:   0.0=no power, 1.0=max power
 
 // MOTOR 2
@@ -120,9 +124,9 @@
 #define M2_MICROSTEPS               8
 #define M2_STEPS_PER_UNIT           0
 #define M2_POLARITY                 0
-#define M2_ENABLE_POLARITY          IO_ACTIVE_HIGH
-#define M2_STEP_POLARITY            IO_ACTIVE_HIGH
-#define M2_POWER_MODE               MOTOR_POWERED_ONLY_WHEN_MOVING
+#define M2_ENABLE_POLARITY          ENABLE_POLARITY
+#define M2_STEP_POLARITY            STEP_POLARITY
+#define M2_POWER_MODE               POWER_MODE
 #define M2_POWER_LEVEL              0.0
 
 // MOTOR 3
@@ -132,9 +136,9 @@
 #define M3_MICROSTEPS               8
 #define M3_STEPS_PER_UNIT           0
 #define M3_POLARITY                 0
-#define M3_ENABLE_POLARITY          IO_ACTIVE_HIGH
-#define M3_STEP_POLARITY            IO_ACTIVE_HIGH
-#define M3_POWER_MODE               MOTOR_POWERED_ONLY_WHEN_MOVING
+#define M3_ENABLE_POLARITY          ENABLE_POLARITY
+#define M3_STEP_POLARITY            STEP_POLARITY
+#define M3_POWER_MODE               POWER_MODE
 #define M3_POWER_LEVEL              0.0
 
 // MOTOR 4
@@ -144,9 +148,9 @@
 #define M4_MICROSTEPS               8
 #define M4_STEPS_PER_UNIT           0
 #define M4_POLARITY                 0
-#define M4_ENABLE_POLARITY          IO_ACTIVE_HIGH
-#define M4_STEP_POLARITY            IO_ACTIVE_HIGH
-#define M4_POWER_MODE               MOTOR_POWERED_ONLY_WHEN_MOVING
+#define M4_ENABLE_POLARITY          ENABLE_POLARITY
+#define M4_STEP_POLARITY            STEP_POLARITY
+#define M4_POWER_MODE               POWER_MODE
 #define M4_POWER_LEVEL              0.0
 
 // MOTOR 5
@@ -156,9 +160,9 @@
 #define M5_MICROSTEPS               8
 #define M5_STEPS_PER_UNIT           0
 #define M5_POLARITY                 0
-#define M5_ENABLE_POLARITY          IO_ACTIVE_HIGH
-#define M5_STEP_POLARITY            IO_ACTIVE_HIGH
-#define M5_POWER_MODE               MOTOR_POWERED_ONLY_WHEN_MOVING
+#define M5_ENABLE_POLARITY          ENABLE_POLARITY
+#define M5_STEP_POLARITY            STEP_POLARITY
+#define M5_POWER_MODE               POWER_MODE
 #define M5_POWER_LEVEL              0.0
 
 // //*****************************************************************************
