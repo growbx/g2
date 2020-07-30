@@ -90,13 +90,13 @@ namespace Motate {
 // NOT ALL OF THESE PINS ARE ON ALL PLATFORMS
 // Undefined pins will be equivalent to Motate::NullPin, and return 1 for Pin<>::isNull();
 
-pin_number kSerial_RXPinNumber = -1; //15
-pin_number kSerial_TXPinNumber = -1; //14
+pin_number kSerial_RXPinNumber = 0; //15
+pin_number kSerial_TXPinNumber = 1; //14
 pin_number kSerial_RTSPinNumber = -1;   // added later 17
 pin_number kSerial_CTSPinNumber = -1;   // added later 16
 
-pin_number kSerial0_RX = -1;
-pin_number kSerial0_TX = -1;
+pin_number kSerial0_RX = 0;
+pin_number kSerial0_TX = 1;
 pin_number kSerial0_RTS = -1;   // added later
 pin_number kSerial0_CTS = -1;   // added later
 
@@ -113,18 +113,6 @@ pin_number kSPI_MOSIPinNumber = -1;
 pin_number kSPI0_SCKPinNumber  = -1;
 pin_number kSPI0_MISOPinNumber = -1;
 pin_number kSPI0_MOSIPinNumber = -1;
-
-//    pin_number kX_StepPinNumber                 =  53;
-//    pin_number kX_DirPinNumber                  =  52;
-//    pin_number kX_EnablePinNumber               =  -1;
-//
-//    pin_number kY_StepPinNumber                 =  51;
-//    pin_number kY_DirPinNumber                  =  50;
-//    pin_number kY_EnablePinNumber               =  -1;
-//
-//    pin_number kZ_StepPinNumber                 =  49;
-//    pin_number kZ_DirPinNumber                  =  48;
-//    pin_number kZ_EnablePinNumber               =  -1;
 
 pin_number kDebug1_PinNumber = -1; //unsure about these
 pin_number kDebug2_PinNumber = -1;
@@ -193,16 +181,14 @@ pin_number kSocket6_Microstep_1PinNumber    = -1;
 pin_number kSocket6_Microstep_2PinNumber    = -1;
 pin_number kSocket6_VrefPinNumber           = -1;  // 67; //PWMTimer<0>
 
-
-pin_number kInput1_PinNumber = 56; //EndStop
-pin_number kInput2_PinNumber = 57; //EndStop
-pin_number kInput3_PinNumber = 58; //EndStop
-pin_number kInput4_PinNumber = 59; //EndStop
-pin_number kInput5_PinNumber = 60; //EndStop
-pin_number kInput6_PinNumber = 61; //EndStop
-
-pin_number kInput7_PinNumber  = 62; //EndStop
-pin_number kInput8_PinNumber  = 63; //EndStop
+pin_number kInput1_PinNumber  = 56; //EndStop xmin (left)
+pin_number kInput2_PinNumber  = 57; //EndStop xmax (right)
+pin_number kInput3_PinNumber  = 58; //EndStop y1min (left arm, back)
+pin_number kInput4_PinNumber  = 59; //EndStop y1max (left arm, front)
+pin_number kInput5_PinNumber  = 60; //EndStop y2min (right arm, back)
+pin_number kInput6_PinNumber  = 61; //EndStop y2max (right arm, front)
+pin_number kInput7_PinNumber  = 62; //EndStop zmin (bottom)
+pin_number kInput8_PinNumber  = 63; //EndStop zmax (top)
 pin_number kInput9_PinNumber  = 64; //EndStop
 pin_number kInput10_PinNumber = 65; //EndStop
 pin_number kInput11_PinNumber = -1;
@@ -257,13 +243,11 @@ pin_number kADC12_PinNumber = -1;
 pin_number kADC13_PinNumber = -1;  
 pin_number kADC14_PinNumber = -1;  
 
-
 // GRBL / gShield compatibility pins -- Due board ONLY
 
 pin_number kGRBL_ResetPinNumber      = -1;
 pin_number kGRBL_FeedHoldPinNumber   = -1;
 pin_number kGRBL_CycleStartPinNumber = -1;
-
 pin_number kGRBL_CommonEnablePinNumber = -1;
 
 /** NOTE: When adding pin definitions here, they must be

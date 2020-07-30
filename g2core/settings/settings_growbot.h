@@ -110,7 +110,7 @@
 #define M1_STEP_ANGLE               1.8                     // {1sa: degrees per step
 #define M1_TRAVEL_PER_REV           80.2747                       // {1tr:  1.25 is a typical value for a screw axis
 #define M1_MICROSTEPS               16                       // {1mi:  1,2,4,8,    16,32 (G2 ONLY)
-#define M1_STEPS_PER_UNIT           2.491445001                    // {1su:  steps to issue per unit of length or degrees of rotation
+// #define M1_STEPS_PER_UNIT           2.49145                    // {1su:  steps to issue per unit of length or degrees of rotation
 #define M1_POLARITY                 0                       // {1po:  0=normal direction, 1=inverted direction
 #define M1_ENABLE_POLARITY          ENABLE_POLARITY          // {1ep:  IO_ACTIVE_LOW or IO_ACTIVE_HIGH
 #define M1_STEP_POLARITY            STEP_POLARITY          // {1ps:  IO_ACTIVE_LOW or IO_ACTIVE_HIGH
@@ -122,7 +122,7 @@
 #define M2_STEP_ANGLE               1.8
 #define M2_TRAVEL_PER_REV           80.2747
 #define M2_MICROSTEPS               16
-#define M2_STEPS_PER_UNIT           2.491445001
+// #define M2_STEPS_PER_UNIT           2.49145
 #define M2_POLARITY                 0
 #define M2_ENABLE_POLARITY          ENABLE_POLARITY
 #define M2_STEP_POLARITY            STEP_POLARITY
@@ -134,7 +134,7 @@
 #define M3_STEP_ANGLE               1.8
 #define M3_TRAVEL_PER_REV           88.6755                    // 1.25 is a typical value for a screw axis
 #define M3_MICROSTEPS               16
-#define M3_STEPS_PER_UNIT           2.255414404
+// #define M3_STEPS_PER_UNIT           2.25541 //accurate to 7 decimal spaces with 5 to the right of the decimal
 #define M3_POLARITY                 0
 #define M3_ENABLE_POLARITY          ENABLE_POLARITY
 #define M3_STEP_POLARITY            STEP_POLARITY
@@ -146,8 +146,8 @@
 #define M4_STEP_ANGLE               1.8
 #define M4_TRAVEL_PER_REV           88.6755                   // in degrees if rotary axis (ABC)
 #define M4_MICROSTEPS               16
-#define M4_STEPS_PER_UNIT           2.255414404
-#define M4_POLARITY                 0
+// #define M4_STEPS_PER_UNIT           2.25541
+#define M4_POLARITY                 1
 #define M4_ENABLE_POLARITY          ENABLE_POLARITY
 #define M4_STEP_POLARITY            STEP_POLARITY
 #define M4_POWER_MODE               POWER_MODE
@@ -158,7 +158,7 @@
 #define M5_STEP_ANGLE               1.8
 #define M5_TRAVEL_PER_REV           15
 #define M5_MICROSTEPS               16
-#define M5_STEPS_PER_UNIT           13.33333333333333
+// #define M5_STEPS_PER_UNIT           13.33333
 #define M5_POLARITY                 0
 #define M5_ENABLE_POLARITY          ENABLE_POLARITY
 #define M5_STEP_POLARITY            STEP_POLARITY
@@ -171,7 +171,7 @@
 
 // X AXIS
 #define X_AXIS_MODE                 AXIS_STANDARD           // {xam:  see canonical_machine.h cmAxisMode for valid values
-// #define X_VELOCITY_MAX              1000.0                  // {xvm:  G0 max velocity in mm/min
+#define X_VELOCITY_MAX              1000.0                  // {xvm:  G0 max velocity in mm/min
 // #define X_FEEDRATE_MAX              1000.0                  // {xfr:  G1 max feed rate in mm/min
 // #define X_TRAVEL_MIN                0.0                     // {xtn:  minimum travel for soft limits
 #define X_TRAVEL_MAX                5000.0                     // {xtm:  travel between switches or crashes
@@ -186,7 +186,7 @@
 
 // Y AXIS
 #define Y_AXIS_MODE                 AXIS_STANDARD
-// #define Y_VELOCITY_MAX              1000.0
+#define Y_VELOCITY_MAX              1000.0
 // #define Y_FEEDRATE_MAX              1000.0
 // #define Y_TRAVEL_MIN                0.0
 #define Y_TRAVEL_MAX                5000.0
@@ -201,7 +201,7 @@
 
 // Z AXIS
 #define Z_AXIS_MODE                 AXIS_STANDARD
-// #define Z_VELOCITY_MAX              1000.0
+#define Z_VELOCITY_MAX              1000.0
 // #define Z_FEEDRATE_MAX              1000.0
 #define Z_TRAVEL_MAX                5000.0
 // #define Z_TRAVEL_MIN                0.0
