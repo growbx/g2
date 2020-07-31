@@ -482,6 +482,26 @@ const cfgItem_t cfgArray[] = {
     { "di12","di12ac",_iip, 0, io_print_ac, io_get_ac, io_set_ac, nullptr, DI12_ACTION },
     { "di12","di12fn",_iip, 0, io_print_fn, io_get_fn, io_set_fn, nullptr, DI12_FUNCTION },
 #endif
+#if (D_IN_CHANNELS >= 13)
+    { "di13","di13mo",_iip, 0, io_print_mo, io_get_mo, io_set_mo, nullptr, DI13_MODE },
+    { "di13","di13ac",_iip, 0, io_print_ac, io_get_ac, io_set_ac, nullptr, DI13_ACTION },
+    { "di13","di13fn",_iip, 0, io_print_fn, io_get_fn, io_set_fn, nullptr, DI13_FUNCTION },
+#endif
+#if (D_IN_CHANNELS >= 14)
+    { "di14","di14mo",_iip, 0, io_print_mo, io_get_mo, io_set_mo, nullptr, DI14_MODE },
+    { "di14","di14ac",_iip, 0, io_print_ac, io_get_ac, io_set_ac, nullptr, DI14_ACTION },
+    { "di14","di14fn",_iip, 0, io_print_fn, io_get_fn, io_set_fn, nullptr, DI14_FUNCTION },
+#endif
+#if (D_IN_CHANNELS >= 15)
+    { "di15","di15mo",_iip, 0, io_print_mo, io_get_mo, io_set_mo, nullptr, DI15_MODE },
+    { "di15","di15ac",_iip, 0, io_print_ac, io_get_ac, io_set_ac, nullptr, DI15_ACTION },
+    { "di15","di15fn",_iip, 0, io_print_fn, io_get_fn, io_set_fn, nullptr, DI15_FUNCTION },
+#endif
+#if (D_IN_CHANNELS >= 16)
+    { "di16","di16mo",_iip, 0, io_print_mo, io_get_mo, io_set_mo, nullptr, DI16_MODE },
+    { "di16","di16ac",_iip, 0, io_print_ac, io_get_ac, io_set_ac, nullptr, DI16_ACTION },
+    { "di16","di16fn",_iip, 0, io_print_fn, io_get_fn, io_set_fn, nullptr, DI16_FUNCTION },
+#endif
 
     // Digital input state readers
     { "in","in1", _i0, 0, io_print_in, io_get_input, set_ro, nullptr, 0 },
@@ -502,6 +522,18 @@ const cfgItem_t cfgArray[] = {
     { "in","in11", _i0, 0, io_print_in, io_get_input, set_ro, nullptr, 0 },
 #endif
 #if (D_IN_CHANNELS >= 12)
+    { "in","in12", _i0, 0, io_print_in, io_get_input, set_ro, nullptr, 0 },
+#endif
+#if (D_IN_CHANNELS >= 13)
+    { "in","in13", _i0, 0, io_print_in, io_get_input, set_ro, nullptr, 0 },
+#endif
+#if (D_IN_CHANNELS >= 14)
+    { "in","in14", _i0, 0, io_print_in, io_get_input, set_ro, nullptr, 0 },
+#endif
+#if (D_IN_CHANNELS >= 15)
+    { "in","in15", _i0, 0, io_print_in, io_get_input, set_ro, nullptr, 0 },
+#endif
+#if (D_IN_CHANNELS >= 16)
     { "in","in12", _i0, 0, io_print_in, io_get_input, set_ro, nullptr, 0 },
 #endif
 
@@ -1294,7 +1326,7 @@ const cfgItem_t cfgArray[] = {
     { "","6",  _f0, 0, tx_print_nul, get_grp, set_grp, nullptr, 0 },
 #endif
 
-#define DIGITAL_IN_GROUPS 10
+#define DIGITAL_IN_GROUPS 17
     { "","in",  _f0, 0, tx_print_nul, get_grp, set_grp, nullptr, 0 },   // input state
     { "","di1", _f0, 0, tx_print_nul, get_grp, set_grp, nullptr, 0 },   // input configs
     { "","di2", _f0, 0, tx_print_nul, get_grp, set_grp, nullptr, 0 },
@@ -1305,6 +1337,13 @@ const cfgItem_t cfgArray[] = {
     { "","di7", _f0, 0, tx_print_nul, get_grp, set_grp, nullptr, 0 },
     { "","di8", _f0, 0, tx_print_nul, get_grp, set_grp, nullptr, 0 },
     { "","di9", _f0, 0, tx_print_nul, get_grp, set_grp, nullptr, 0 },
+    { "","di10", _f0, 0, tx_print_nul, get_grp, set_grp, nullptr, 0 },
+    { "","di11", _f0, 0, tx_print_nul, get_grp, set_grp, nullptr, 0 },
+    { "","di12", _f0, 0, tx_print_nul, get_grp, set_grp, nullptr, 0 },
+    { "","di13", _f0, 0, tx_print_nul, get_grp, set_grp, nullptr, 0 },
+    { "","di14", _f0, 0, tx_print_nul, get_grp, set_grp, nullptr, 0 },
+    { "","di15", _f0, 0, tx_print_nul, get_grp, set_grp, nullptr, 0 },
+    { "","di16", _f0, 0, tx_print_nul, get_grp, set_grp, nullptr, 0 },
         
 #define DIGITAL_OUT_GROUPS 14
     { "","out", _f0, 0, tx_print_nul, get_grp, set_grp, nullptr, 0 },   // output state

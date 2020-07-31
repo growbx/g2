@@ -232,6 +232,10 @@ ioDigitalInputExt<kInput9_PinNumber  ,  9> _din9;
 ioDigitalInputExt<kInput10_PinNumber , 10> _din10;
 ioDigitalInputExt<kInput11_PinNumber , 11> _din11;
 ioDigitalInputExt<kInput12_PinNumber , 12> _din12;
+ioDigitalInputExt<kInput13_PinNumber , 13> _din13;
+ioDigitalInputExt<kInput14_PinNumber , 14> _din14;
+ioDigitalInputExt<kInput15_PinNumber , 15> _din15;
+ioDigitalInputExt<kInput16_PinNumber , 16> _din16;
 
 // Generated with:
 // perl -e 'for($i=1;$i<14;$i++) { print "#if OUTPUT${i}_PWM == 1\nstatic PWMOutputPin<kOutput${i}_PinNumber>  output_${i}_pin;\n#else\nstatic PWMLikeOutputPin<kOutput${i}_PinNumber>  output_${i}_pin;\n#endif\n";}'
@@ -404,6 +408,10 @@ void inputs_reset(void) {
   _din10.reset();
   _din11.reset();
   _din12.reset();
+  _din13.reset();
+  _din14.reset();
+  _din15.reset();
+  _din16.reset();
 
 }
 

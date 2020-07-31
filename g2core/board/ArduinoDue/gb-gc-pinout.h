@@ -61,7 +61,7 @@
 #define ADC3_AVAILABLE 0
 
 #define XIO_HAS_USB 1
-#define XIO_HAS_UART 0
+#define XIO_HAS_UART 1
 #define XIO_HAS_SPI 0
 #define XIO_HAS_I2C 0
 
@@ -189,10 +189,14 @@ pin_number kInput5_PinNumber  = 60; //EndStop y2min (right arm, back)
 pin_number kInput6_PinNumber  = 61; //EndStop y2max (right arm, front)
 pin_number kInput7_PinNumber  = 62; //EndStop zmin (bottom)
 pin_number kInput8_PinNumber  = 63; //EndStop zmax (top)
-pin_number kInput9_PinNumber  = 64; //EndStop
-pin_number kInput10_PinNumber = 65; //EndStop
-pin_number kInput11_PinNumber = -1;
-pin_number kInput12_PinNumber = -1;
+pin_number kInput9_PinNumber  = 64; //Alarm X1
+pin_number kInput10_PinNumber = 65; //Alarm X2
+pin_number kInput11_PinNumber = 22; //Alarm Y1
+pin_number kInput12_PinNumber = 24; //Alarm Y2
+pin_number kInput13_PinNumber = 26; //Alarm Z
+pin_number kInput14_PinNumber = -1; //Unassigned
+pin_number kInput15_PinNumber = -1; //Unassigned
+pin_number kInput16_PinNumber = -1; //Unassigned
 
 pin_number kSpindle_EnablePinNumber = -1;
 pin_number kSpindle_DirPinNumber    = -1;  
