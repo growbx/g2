@@ -51,11 +51,11 @@
 #define USB_SERIAL_PORTS_EXPOSED    1                       // Valid options are 1 or 2, only!
 // #define XIO_ENABLE_FLOW_CONTROL     FLOW_CONTROL_RTS        // {ex: FLOW_CONTROL_OFF, FLOW_CONTROL_XON, FLOW_CONTROL_RTS
 #define COMM_MODE                   JSON_MODE               // {ej: TEXT_MODE, JSON_MODE
-// #define TEXT_VERBOSITY              TV_VERBOSE              // {tv: TV_SILENT, TV_VERBOSE
+#define TEXT_VERBOSITY              TV_VERBOSE              // {tv: TV_SILENT, TV_VERBOSE
 #define XIO_UART_MUTES_WHEN_USB_CONNECTED  0                // UART will be muted when USB connected (off by default)
 // #define JSON_VERBOSITY              JV_MESSAGES             // {jv: JV_SILENT, JV_FOOTER, JV_CONFIGS, JV_MESSAGES, JV_LINENUM, JV_VERBOSE
-// #define QUEUE_REPORT_VERBOSITY      QR_OFF                  // {qv: QR_OFF, QR_SINGLE, QR_TRIPLE
-// #define STATUS_REPORT_VERBOSITY     SR_FILTERED             // {sv: SR_OFF, SR_FILTERED, SR_VERBOSE
+#define QUEUE_REPORT_VERBOSITY      QR_OFF                  // {qv: QR_OFF, QR_SINGLE, QR_TRIPLE
+#define STATUS_REPORT_VERBOSITY     SR_FILTERED             // {sv: SR_OFF, SR_FILTERED, SR_VERBOSE
 #define STATUS_REPORT_MIN_MS        100                     // (no JSON) milliseconds - enforces a viable minimum
 #define STATUS_REPORT_INTERVAL_MS   250                     // {si: milliseconds - set $SV=0 to disable
 #define STATUS_REPORT_DEFAULTS "line","posx","posy","posz","posa","feed","vel","unit","coor","dist","admo","frmo","momo","stat"
@@ -202,73 +202,73 @@
 
 // Xmin
 #define DI1_MODE                    IO_ACTIVE_LOW     // Normally open
-#define DI1_ACTION                  INPUT_ACTION_SHUTDOWN
+#define DI1_ACTION                  INPUT_ACTION_NONE
 #define DI1_FUNCTION                INPUT_FUNCTION_LIMIT
 
 // Xmax
 #define DI2_MODE                    IO_ACTIVE_LOW     // Normally open
-#define DI2_ACTION                  INPUT_ACTION_SHUTDOWN
+#define DI2_ACTION                  INPUT_ACTION_NONE
 #define DI2_FUNCTION                INPUT_FUNCTION_LIMIT
 
 // Y1min
 #define DI3_MODE                    IO_ACTIVE_LOW     // Normally open
-#define DI3_ACTION                  INPUT_ACTION_SHUTDOWN
+#define DI3_ACTION                  INPUT_ACTION_NONE
 #define DI3_FUNCTION                INPUT_FUNCTION_LIMIT
 
 // Y1max
 #define DI4_MODE                    IO_ACTIVE_LOW     // Normally open
-#define DI4_ACTION                  INPUT_ACTION_SHUTDOWN
+#define DI4_ACTION                  INPUT_ACTION_NONE
 #define DI4_FUNCTION                INPUT_FUNCTION_LIMIT
 
 // Y2min
 #define DI5_MODE                    IO_ACTIVE_LOW     // Normally open
-#define DI5_ACTION                  INPUT_ACTION_SHUTDOWN
+#define DI5_ACTION                  INPUT_ACTION_NONE
 #define DI5_FUNCTION                INPUT_FUNCTION_LIMIT
 
 // Y2max
 #define DI6_MODE                    IO_ACTIVE_LOW     // Normally open
-#define DI6_ACTION                  INPUT_ACTION_SHUTDOWN
+#define DI6_ACTION                  INPUT_ACTION_NONE
 #define DI6_FUNCTION                INPUT_FUNCTION_LIMIT
 
 // Zmin
 #define DI7_MODE                    IO_ACTIVE_LOW     // Normally open
-#define DI7_ACTION                  INPUT_ACTION_SHUTDOWN
+#define DI7_ACTION                  INPUT_ACTION_NONE
 #define DI7_FUNCTION                INPUT_FUNCTION_LIMIT
 
 // Zmax
 #define DI8_MODE                    IO_ACTIVE_LOW     // Normally open
-#define DI8_ACTION                  INPUT_ACTION_SHUTDOWN
+#define DI8_ACTION                  INPUT_ACTION_NONE
 #define DI8_FUNCTION                INPUT_FUNCTION_LIMIT
 
 // Alarm X1
 #define DI9_MODE                    IO_ACTIVE_HIGH     // Normally closed
-#define DI9_ACTION                  INPUT_ACTION_NONE
+#define DI9_ACTION                  INPUT_ACTION_ALARM
 #define DI9_FUNCTION                INPUT_FUNCTION_NONE
 
 // Alarm X2
 #define DI10_MODE                   IO_ACTIVE_LOW     // Normally open
-#define DI10_ACTION                 INPUT_ACTION_NONE
+#define DI10_ACTION                 INPUT_ACTION_ALARM
 #define DI10_FUNCTION               INPUT_FUNCTION_NONE
 
 // Alarm Y1
 #define DI11_MODE                    IO_ACTIVE_LOW     // Normally open
-#define DI11_ACTION                  INPUT_ACTION_SHUTDOWN
-#define DI11_FUNCTION                INPUT_FUNCTION_LIMIT
+#define DI11_ACTION                  INPUT_ACTION_ALARM
+#define DI11_FUNCTION                INPUT_FUNCTION_NONE
 
 // Alarm Y2
 #define DI12_MODE                    IO_ACTIVE_LOW     // Normally open
-#define DI12_ACTION                  INPUT_ACTION_SHUTDOWN
-#define DI12_FUNCTION                INPUT_FUNCTION_LIMIT
+#define DI12_ACTION                  INPUT_ACTION_ALARM
+#define DI12_FUNCTION                INPUT_FUNCTION_NONE
 
 // Alarm Z
 #define DI13_MODE                    IO_ACTIVE_LOW     // Normally open
-#define DI13_ACTION                  INPUT_ACTION_SHUTDOWN
-#define DI13_FUNCTION                INPUT_FUNCTION_LIMIT
+#define DI13_ACTION                  INPUT_ACTION_ALARM
+#define DI13_FUNCTION                INPUT_FUNCTION_NONE
 
 // Unassigned
 #define DI14_MODE                    IO_ACTIVE_LOW     // Normally open
-#define DI14_ACTION                  INPUT_ACTION_SHUTDOWN
-#define DI14_FUNCTION                INPUT_FUNCTION_LIMIT
+#define DI14_ACTION                  INPUT_ACTION_NONE
+#define DI14_FUNCTION                INPUT_FUNCTION_NONE
 
 // Unassigned
 #define DI15_MODE                    IO_ACTIVE_HIGH     // Normally closed
@@ -294,7 +294,12 @@
 #define DO10_MODE                   IO_ACTIVE_HIGH
 #define DO11_MODE                   IO_ACTIVE_HIGH
 #define DO12_MODE                   IO_ACTIVE_HIGH
-#define DO13_MODE                   IO_ACTIVE_HIGH
+
+//These need to always be pulled low
+#define DO13_MODE                   IO_ACTIVE_HIGH // 74ACT16244DGGR Output Enable
+#define DO14_MODE                   IO_ACTIVE_HIGH // 74ACT16244DGGR Output Enable
+#define DO15_MODE                   IO_ACTIVE_HIGH // 74ACT16244DGGR Output Enable
+#define DO16_MODE                   IO_ACTIVE_HIGH // 74ACT16244DGGR Output Enable
 
 // *** DEFAULT COORDINATE SYSTEM OFFSETS ***
 

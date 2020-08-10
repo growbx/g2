@@ -36,8 +36,7 @@
 #define INPUT_LOCKOUT_MS    10          // milliseconds to go dead after input firing
 
 #define D_IN_CHANNELS       16          // number of digital inputs supported
-//#define D_OUT_CHANNELS    13          // number of digital outputs supported
-#define D_OUT_CHANNELS	    9           // number of digital outputs supported
+#define D_OUT_CHANNELS	    16          // number of digital outputs supported
 #define A_IN_CHANNELS	    0           // number of analog inputs supported
 #define A_OUT_CHANNELS	    0           // number of analog outputs supported
 

@@ -982,6 +982,46 @@
 #define DI12_FUNCTION               INPUT_FUNCTION_NONE
 #endif
 
+#ifndef DI13_MODE
+#define DI13_MODE                   IO_ACTIVE_LOW     // Normally open
+#endif
+#ifndef DI13_ACTION
+#define DI13_ACTION                 INPUT_ACTION_NONE
+#endif
+#ifndef DI13_FUNCTION
+#define DI13_FUNCTION               INPUT_FUNCTION_NONE
+#endif
+
+#ifndef DI14_MODE
+#define DI14_MODE                   IO_ACTIVE_LOW     // Normally open
+#endif
+#ifndef DI14_ACTION
+#define DI14_ACTION                 INPUT_ACTION_NONE
+#endif
+#ifndef DI14_FUNCTION
+#define DI14_FUNCTION               INPUT_FUNCTION_NONE
+#endif
+
+#ifndef DI15_MODE
+#define DI15_MODE                   IO_ACTIVE_LOW     // Normally open
+#endif
+#ifndef DI15_ACTION
+#define DI15_ACTION                 INPUT_ACTION_NONE
+#endif
+#ifndef DI15_FUNCTION
+#define DI15_FUNCTION               INPUT_FUNCTION_NONE
+#endif
+
+#ifndef DI16_MODE
+#define DI16_MODE                   IO_ACTIVE_LOW     // Normally open
+#endif
+#ifndef DI16_ACTION
+#define DI16_ACTION                 INPUT_ACTION_NONE
+#endif
+#ifndef DI16_FUNCTION
+#define DI16_FUNCTION               INPUT_FUNCTION_NONE
+#endif
+
 // DIGITAL OUTPUTS - Currently these are hard-wired to extruders
 
 //Extruder1_PWM
@@ -1038,6 +1078,19 @@
 
 #ifndef DO13_MODE
 #define DO13_MODE                   IO_ACTIVE_HIGH
+#endif
+
+//Unassigned
+#ifndef DO14_MODE
+#define DO14_MODE                   IO_ACTIVE_HIGH
+#endif
+
+#ifndef DO15_MODE
+#define DO15_MODE                   IO_ACTIVE_HIGH
+#endif
+
+#ifndef DO16_MODE
+#define DO16_MODE                   IO_ACTIVE_HIGH
 #endif
 
 // *** PWM Settings *** //

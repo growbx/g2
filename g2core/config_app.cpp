@@ -534,7 +534,7 @@ const cfgItem_t cfgArray[] = {
     { "in","in15", _i0, 0, io_print_in, io_get_input, set_ro, nullptr, 0 },
 #endif
 #if (D_IN_CHANNELS >= 16)
-    { "in","in12", _i0, 0, io_print_in, io_get_input, set_ro, nullptr, 0 },
+    { "in","in16", _i0, 0, io_print_in, io_get_input, set_ro, nullptr, 0 },
 #endif
 
     // digital output configs
@@ -551,6 +551,9 @@ const cfgItem_t cfgArray[] = {
     { "do11","do11mo",_iip, 0, io_print_domode, io_get_domode, io_set_domode, nullptr, DO11_MODE },
     { "do12","do12mo",_iip, 0, io_print_domode, io_get_domode, io_set_domode, nullptr, DO12_MODE },
     { "do13","do13mo",_iip, 0, io_print_domode, io_get_domode, io_set_domode, nullptr, DO13_MODE },
+    { "do14","do14mo",_iip, 0, io_print_domode, io_get_domode, io_set_domode, nullptr, DO14_MODE },
+    { "do15","do15mo",_iip, 0, io_print_domode, io_get_domode, io_set_domode, nullptr, DO15_MODE },
+    { "do16","do16mo",_iip, 0, io_print_domode, io_get_domode, io_set_domode, nullptr, DO16_MODE },
 
     // Digital output state readers (default to non-active)
     { "out","out1",  _i0, 2, io_print_out, io_get_output, io_set_output, nullptr, 0 },
@@ -565,6 +568,10 @@ const cfgItem_t cfgArray[] = {
     { "out","out10", _i0, 2, io_print_out, io_get_output, io_set_output, nullptr, 0 },
     { "out","out11", _i0, 2, io_print_out, io_get_output, io_set_output, nullptr, 0 },
     { "out","out12", _i0, 2, io_print_out, io_get_output, io_set_output, nullptr, 0 },
+    { "out","out13", _i0, 2, io_print_out, io_get_output, io_set_output, nullptr, 0 },
+    { "out","out14", _i0, 2, io_print_out, io_get_output, io_set_output, nullptr, 0 },
+    { "out","out15", _i0, 2, io_print_out, io_get_output, io_set_output, nullptr, 0 },
+    { "out","out16", _i0, 2, io_print_out, io_get_output, io_set_output, nullptr, 0 },
 
     // PWM settings
     { "p1","p1frq",_fip, 0, pwm_print_p1frq, get_flt, pwm_set_pwm,(float *)&pwm.c[PWM_1].frequency,    P1_PWM_FREQUENCY },
@@ -1360,6 +1367,9 @@ const cfgItem_t cfgArray[] = {
     { "","do11", _f0, 0, tx_print_nul, get_grp, set_grp, nullptr, 0 },
     { "","do12", _f0, 0, tx_print_nul, get_grp, set_grp, nullptr, 0 },
     { "","do13", _f0, 0, tx_print_nul, get_grp, set_grp, nullptr, 0 },
+    { "","do14", _f0, 0, tx_print_nul, get_grp, set_grp, nullptr, 0 },
+    { "","do15", _f0, 0, tx_print_nul, get_grp, set_grp, nullptr, 0 },
+    { "","do16", _f0, 0, tx_print_nul, get_grp, set_grp, nullptr, 0 },
 
 #define COORDINATE_OFFSET_GROUPS 9
     { "","g54",_f0, 0, tx_print_nul, get_grp, set_grp, nullptr, 0 },    // coord offset groups

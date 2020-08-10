@@ -84,6 +84,9 @@
 #define OUTPUT11_PWM 0
 #define OUTPUT12_PWM 0
 #define OUTPUT13_PWM 0
+#define OUTPUT14_PWM 0
+#define OUTPUT15_PWM 0
+#define OUTPUT16_PWM 0
 
 namespace Motate {
 
@@ -226,10 +229,10 @@ pin_number kOutput10_PinNumber = 34;  // Diagnostic LED
 
 pin_number kOutput11_PinNumber = 32;  // Diagnostic LED
 pin_number kOutput12_PinNumber = 30;  // Diagnostic LED
-pin_number kOutput13_PinNumber = -1;  
-pin_number kOutput14_PinNumber = -1;  
-pin_number kOutput15_PinNumber = -1;  
-pin_number kOutput16_PinNumber = -1;  
+pin_number kOutput13_PinNumber = 12;  // 74ACT16244DGGR Output Enable
+pin_number kOutput14_PinNumber = 13;  // 74ACT16244DGGR Output Enable
+pin_number kOutput15_PinNumber = 35;  // 74ACT16244DGGR Output Enable
+pin_number kOutput16_PinNumber = 37;  // 74ACT16244DGGR Output Enable
 
 pin_number kADC0_PinNumber  = -1;  
 pin_number kADC1_PinNumber  = -1;  

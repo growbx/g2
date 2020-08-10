@@ -305,6 +305,21 @@ static PWMOutputPin<kOutput13_PinNumber>  output_13_pin {kNormal, 200000};
 #else
 static PWMLikeOutputPin<kOutput13_PinNumber>  output_13_pin;
 #endif
+#if OUTPUT14_PWM == 1
+static PWMOutputPin<kOutput14_PinNumber>  output_14_pin {kNormal, 200000};
+#else
+static PWMLikeOutputPin<kOutput14_PinNumber>  output_14_pin;
+#endif
+#if OUTPUT15_PWM == 1
+static PWMOutputPin<kOutput15_PinNumber>  output_15_pin {kNormal, 200000};
+#else
+static PWMLikeOutputPin<kOutput15_PinNumber>  output_15_pin;
+#endif
+#if OUTPUT16_PWM == 1
+static PWMOutputPin<kOutput16_PinNumber>  output_16_pin {kNormal, 200000};
+#else
+static PWMLikeOutputPin<kOutput16_PinNumber>  output_16_pin;
+#endif
 // END generated
 
 /************************************************************************************
@@ -335,6 +350,9 @@ void gpio_init(void)
     output_11_pin.setFrequency(200000);
     output_12_pin.setFrequency(200000);
     output_13_pin.setFrequency(200000);
+    output_14_pin.setFrequency(200000);
+    output_15_pin.setFrequency(200000);
+    output_16_pin.setFrequency(200000);
     // END generated
 
     return(gpio_reset());
@@ -380,6 +398,15 @@ void outputs_reset(void) {
 #endif
 #if D_OUT_CHANNELS >= 13
     if (d_out[13-1].mode != IO_MODE_DISABLED) { (output_13_pin   = (d_out[13-1].mode == IO_ACTIVE_LOW) ? 1.0 : 0.0); }
+#endif
+#if D_OUT_CHANNELS >= 14
+    if (d_out[14-1].mode != IO_MODE_DISABLED) { (output_14_pin   = (d_out[14-1].mode == IO_ACTIVE_LOW) ? 1.0 : 0.0); }
+#endif
+#if D_OUT_CHANNELS >= 15
+    if (d_out[15-1].mode != IO_MODE_DISABLED) { (output_15_pin   = (d_out[15-1].mode == IO_ACTIVE_LOW) ? 1.0 : 0.0); }
+#endif
+#if D_OUT_CHANNELS >= 16
+    if (d_out[16-1].mode != IO_MODE_DISABLED) { (output_16_pin   = (d_out[16-1].mode == IO_ACTIVE_LOW) ? 1.0 : 0.0); }
 #endif
 }
 
@@ -511,6 +538,9 @@ stat_t gpio_set_output(uint8_t output_num, float value) {
           case 11:  { output_11_pin = value; } break;
           case 12:  { output_12_pin = value; } break;
           case 13:  { output_13_pin = value; } break;
+          case 14:  { output_14_pin = value; } break;
+          case 15:  { output_15_pin = value; } break;
+          case 16:  { output_16_pin = value; } break;
           // END generated
           default: { value = 0; } // inactive
       }
@@ -614,6 +644,9 @@ stat_t io_set_domode(nvObj_t *nv)           // output function
         case 11: if (output_11_pin.isNull()) { nv->value_int = IO_MODE_DISABLED; } break;
         case 12: if (output_12_pin.isNull()) { nv->value_int = IO_MODE_DISABLED; } break;
         case 13: if (output_13_pin.isNull()) { nv->value_int = IO_MODE_DISABLED; } break;
+        case 14: if (output_14_pin.isNull()) { nv->value_int = IO_MODE_DISABLED; } break;
+        case 15: if (output_15_pin.isNull()) { nv->value_int = IO_MODE_DISABLED; } break;
+        case 16: if (output_16_pin.isNull()) { nv->value_int = IO_MODE_DISABLED; } break;
         default: {}
     }
 
@@ -652,6 +685,9 @@ stat_t io_get_output(nvObj_t *nv)
             case 11: { nv->value_flt = (float)output_11_pin; } break;
             case 12: { nv->value_flt = (float)output_12_pin; } break;
             case 13: { nv->value_flt = (float)output_13_pin; } break;
+            case 14: { nv->value_flt = (float)output_14_pin; } break;
+            case 15: { nv->value_flt = (float)output_15_pin; } break;
+            case 16: { nv->value_flt = (float)output_16_pin; } break;
             default: { nv->valuetype = TYPE_NULL;  }    // reports back as NULL
         }
         if (outMode == IO_ACTIVE_LOW) {
