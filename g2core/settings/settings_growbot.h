@@ -58,9 +58,20 @@
 #define STATUS_REPORT_VERBOSITY     SR_FILTERED             // {sv: SR_OFF, SR_FILTERED, SR_VERBOSE
 #define STATUS_REPORT_MIN_MS        100                     // (no JSON) milliseconds - enforces a viable minimum
 #define STATUS_REPORT_INTERVAL_MS   250                     // {si: milliseconds - set $SV=0 to disable
-#define STATUS_REPORT_DEFAULTS "line","posx","posy","posz","posa","feed","vel","unit","coor","dist","admo","frmo","momo","stat"
-// Alternate SRs that report in drawable units
-//#define STATUS_REPORT_DEFAULTS "line","vel","mpox","mpoy","mpoz","mpoa","coor","ofsa","ofsx","ofsy","ofsz","dist","unit","stat","homz","homy","homx","momo"
+#define STATUS_REPORT_DEFAULTS "sys","line","posx","posy","posz","feed","vel",\
+                               "unit","coor","dist","admo","frmo","momo","stat","mpox",\
+                               "mpoy","mpoz","x","y","z","1","2","3","4","5","ofsx",\
+                               "ofsy","ofsz","homz","homy","homx","g54","g55","g28",\
+                               "g30","home","di1","di2","di3","di4","di5","di6","di7",\
+                               "di8","di9","di10","di11","di12","di13","di14","di15",\
+                               "di16","do1","do2","do3","do4","do5","do6","do7",\
+                               "do8","do9","do10","do11","do12","do13","do14","do15",\
+                               "do16","in1","in2","in3","in4","in5","in6","in7",\
+                               "in8","in9","in10","in11","in12","in13","in14","in15",\
+                               "in16","out1","out2","out3","out4","out5","out6","out7",\
+                               "out8","out9","out10","out11","out12","out13","out14",\
+                               "out15","out16","macs","cycs","mots","hold","plan",\
+                               "path","dist","frmo"
 #define MARLIN_COMPAT_ENABLED       true                    // boolean, either true or false
 
 // *** Gcode Startup Defaults *** //
@@ -135,14 +146,14 @@
 // X AXIS
 #define X_AXIS_MODE                 AXIS_STANDARD           // {xam:  see canonical_machine.h cmAxisMode for valid values
 #define X_VELOCITY_MAX              3000.0                  // {xvm:  G0 max velocity in mm/min
-// #define X_TRAVEL_MIN                0.0                     // {xtn:  minimum travel for soft limits
-#define X_TRAVEL_MAX                3000.0                    // {xtm:  travel between switches or crashes
-// #define X_JERK_MAX                  1000.0                  // {xjm:
-// #define X_JERK_HIGH_SPEED           1000.0                  // {xjh:
+// #define X_TRAVEL_MIN                0.0                  // {xtn:  minimum travel for soft limits
+#define X_TRAVEL_MAX                3000.0                  // {xtm:  travel between switches or crashes
+// #define X_JERK_MAX                  1000.0               // {xjm:
+// #define X_JERK_HIGH_SPEED           1000.0               // {xjh:
 #define X_HOMING_INPUT              1                       // {xhi:  input used for homing or 0 to disable
 #define X_HOMING_DIRECTION          0                       // {xhd:  0=search moves negative, 1= search moves positive
-#define X_SEARCH_VELOCITY           X_VELOCITY_MAX/2                   // {xsv:  minus means move to minimum switch
-#define X_LATCH_VELOCITY            X_VELOCITY_MAX/10                   // {xlv:  mm/min
+#define X_SEARCH_VELOCITY           X_VELOCITY_MAX/2        // {xsv:  minus means move to minimum switch
+#define X_LATCH_VELOCITY            X_VELOCITY_MAX/10       // {xlv:  mm/min
 #define X_LATCH_BACKOFF             4.0                     // {xlb:  mm
 #define X_ZERO_BACKOFF              2.0                     // {xzb:  mm
 
