@@ -148,7 +148,14 @@ endif
 
 ifeq ("$(CONFIG)","Growbot")
     ifeq ("$(BOARD)","NONE")
-        BOARD=gb-gc
+        BOARD=gbgc
+    endif
+    SETTINGS_FILE="settings_growbot.h"
+endif
+
+ifeq ("$(CONFIG)","Growbot2")
+    ifeq ("$(BOARD)","NONE")
+        BOARD=gbgc2
     endif
     SETTINGS_FILE="settings_growbot.h"
 endif

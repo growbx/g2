@@ -1,6 +1,6 @@
 /*
  * hardware.cpp - general hardware support functions
- * For: /board/g2v9
+ * For: /board/ArduinoDue
  * This file is part of the g2core project
  *
  * Copyright (c) 2010 - 2018 Alden S. Hart, Jr.
